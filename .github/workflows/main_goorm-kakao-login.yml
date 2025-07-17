@@ -23,6 +23,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'microsoft'
+          
+      - name: Grant execute permission for Gradle wrapper
+        run: chmod +x ./gradlew
 
       - name: Build with Gradle #애저가 자동으로 생성한 스크립트는 maven을 사용 -> Gradle로 변경
         run: ./gradlew clean bootJar
