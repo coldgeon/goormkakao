@@ -68,5 +68,5 @@ jobs:
         with:
           app-name: 'goorm-kakao-login'
           slot-name: 'Production'
-          package: '*.jar'
-          
+          package: 'app.jar'
+          startup-command: 'java -jar /home/site/wwwroot/app.jar'
