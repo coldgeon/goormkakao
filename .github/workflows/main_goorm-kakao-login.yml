@@ -24,8 +24,13 @@ jobs:
           java-version: '17'
           distribution: 'microsoft'
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Build with Gradle 
+        run: ./gradlew clean bootJar
+      
+      - name: Rename JAR to app.jar
+        run: |
+          JAR_PATH=$(find build/libs -name "*SNAPSHOT.jar" | grep -v "plain" | head -n 1)
+          cp "$JAR_PATH" build/libs/app.jar
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
