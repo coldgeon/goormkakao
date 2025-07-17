@@ -1,33 +1,14 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
 spring:
-  config:
-    import: optional:file:.env[.properties]
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-  jpa:
-    hibernate:
-      ddl-auto: update # 애플리케이션 실행 시 엔티티에 맞춰 테이블 변경
-    properties:
-      hibernate:
-        format_sql: true # SQL 쿼리를 보기 좋게 포맷팅
-        database-platform: org.hibernate.dialect.MySQLDialect
-    show-sql: true # 실행되는 SQL 쿼리 로그 출력
-
-#  h2:
-#    console:
-#      enabled: true
-#      path: /h2-console
-
-# 카카오 로그인 설정
-kakao:
-  client-id: ${KAKAO_CLIENT_ID}
-  redirect-uri: ${KAKAO_REDIRECT_URI}
-
-# JWT 설정 추가
-jwt:
-  secret: ${JWT_SECRET_KEY}
-  # 60분 * 60초 * 1000ms = 1시간
-  expiration-time: 3600000
-
+  jackson:
+    date-format: yyyy/MM/dd HH:mm
+    time-zone: Asia/Seoul
+  profiles:
+    active: deploy  #실행할 프로필 -> deploy or local (git에 배포할 때는 deploy)
