@@ -1,4 +1,4 @@
-package com.kakaologin.goormkakao.dto;
+package com.kakaologin.goormkakao.kakao.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
