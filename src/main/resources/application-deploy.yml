@@ -15,7 +15,7 @@ spring:
         database-platform: org.hibernate.dialect.MySQLDialect
     show-sql: true # 실행되는 SQL 쿼리 로그 출력
 
-#  h2:
+  h2:
 #    console:
 #      enabled: true
 #      path: /h2-console

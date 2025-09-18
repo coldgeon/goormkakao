@@ -29,11 +29,14 @@ dependencies {
 //	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	//swagger dependency
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0' // 최신 버전은 Maven Central에서 확인 가능
+
+
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
-	//swagger dependency
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+	//jwt 관련
+	implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
 
 	//컴파일
 	compileOnly 'org.projectlombok:lombok'
@@ -43,14 +46,10 @@ dependencies {
 
 	//mysql 연걸
 	runtimeOnly 'com.mysql:mysql-connector-j'
-
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
-	//jwt 관련
-	implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
 	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
 	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.5'
 }
