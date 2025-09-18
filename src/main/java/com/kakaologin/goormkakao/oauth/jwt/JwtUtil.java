@@ -1,4 +1,4 @@
-package com.kakaologin.goormkakao.jwt;
+package com.kakaologin.goormkakao.oauth.jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;

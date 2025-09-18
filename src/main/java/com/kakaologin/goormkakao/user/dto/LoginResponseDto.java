@@ -1,4 +1,4 @@
-package com.kakaologin.goormkakao.kakao.dto;
+package com.kakaologin.goormkakao.user.dto;
 
 import lombok.Builder;
 import lombok.Getter;

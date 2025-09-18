@@ -15,16 +15,19 @@ spring:
         database-platform: org.hibernate.dialect.MySQLDialect
     show-sql: true # 실행되는 SQL 쿼리 로그 출력
 
-#  h2:
-#    console:
-#      enabled: true
-#      path: /h2-console
-
 # 카카오 로그인 설정
 kakao:
   client-id: ${KAKAO_CLIENT_ID}
   redirect-uri: ${KAKAO_REDIRECT_URI}
   logout-redirect-uri: ${KAKAO_LOGOUT_REDIRECT_URI}
+
+# naver 로그인 설정
+naver:
+  client-id: ${NAVER_CLIENT_ID}
+  client-secret: ${NAVER_CLIENT_SECRET}
+  redirect-uri: ${NAVER_REDIRECT_URI}
+  request-token-uri: ${NAVER_REQUEST_TOKEN_URI}
+  request-profile-uri: ${NAVER_REQUEST_PROFILE_URI}
 
 # JWT 설정 추가
 jwt:
